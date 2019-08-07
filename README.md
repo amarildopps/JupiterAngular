@@ -1,3 +1,5 @@
+ATT: this Angular project consume an ASP.Net Core API locate in repo https://github.com/amarildopps/JupiterApiFinal
+
 # ClienteJupiterCandidatura
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.5.
