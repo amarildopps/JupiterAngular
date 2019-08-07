@@ -1,0 +1,68 @@
+<div class="container home-content">
+  <h3>Submeter Candidatura</h3>
+
+  <div class="row" style="margin-top: 30px">
+
+    <div class="col-md-4" style="border-right: 1px #000 solid">
+      <div class="col-md-12">
+        <img src="../../../assets/imagens/prog.jpg" class="card-img-top" alt="...">
+      </div>
+      <div class="col-md-12">
+        <h5 class="card-title">{{vagaSelecionada.descricao}}</h5>
+      </div>
+      <div class="col-md-12">
+        <p class="card-text">{{vagaSelecionada.requisitos}}</p>
+      </div>
+    </div>
+
+    <div class="col-md-8" style="padding: 40px">
+      <div class="row">
+        <h5>Dados Do Candidato</h5>
+
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <!--div class="form-group form-check">
+            <input [(ngModel)]="inscrito" name="inscrito" type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Ja esta inscrito? (Se ja estiver inscrito nao precisara
+              fornecer todos os dados)</label>
+          </div-->
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="candidato.email" name="email"
+              placeholder="Informe o seu email">
+          </div>
+          <div *ngIf="inscrito" class="form-group">
+              <button class="btn btn-primary">Pesquisar Email</button>
+            </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Nome</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="candidato.nome" name="nome"
+              placeholder="Informe o seu nome">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Num Identificacao</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="candidato.numIdentificacao"
+              name="numIdentificacao" placeholder="Informe o numero do seu documento de Identificacao">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupFileAddon01">Curriculo</span>
+            </div>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="inputGroupFile01"
+              #anexoPdf accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" (change)="selecionarFicheiro($event)"
+                aria-describedby="inputGroupFileAddon01">
+              <label class="custom-file-label" for="inputGroupFile01">{{file.name}}</label>
+            </div>
+          </div>
+          <button type="button" (click)="submeterCandidatura()" class="btn btn-success"
+            style="float: right">Submeter</button>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>

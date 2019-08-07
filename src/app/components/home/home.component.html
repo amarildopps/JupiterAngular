@@ -1,0 +1,20 @@
+
+<div class="container home-content">
+  <h3>VAGAS DISPONIVEIS</h3>
+  <div class="lista-vagas">
+    <div *ngIf="listaVagas.length > 0" class="row">
+      <div *ngFor="let vaga of listaVagas" class="col-md-3" style="margin: 30px">
+        <div class="card" style="width: 18rem;">
+          <img src="../../../assets/imagens/prog.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{vaga.descricao}}</h5>
+            <p class="card-text">{{vaga.requisitos}}</p>
+            <a [routerLink]="['/inscricao']" [queryParams]="{idVaga: vaga.id}" class="btn btn-info">Candidatar-me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
